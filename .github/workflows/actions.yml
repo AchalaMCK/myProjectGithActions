@@ -28,6 +28,11 @@ jobs:
         run: mvn -B test --file pom.xml
 
       - name: Build with Maven
-        run:
-          mvn clean
-          mvn -B package --file pom.xml
+        run: mvn -B package --file pom.xml
+
+      - name: Build with Maven
+        uses: actions/build-push-action@V2
+        with:
+            context: .
+            dockerfile: DockerFile
+            push: false
