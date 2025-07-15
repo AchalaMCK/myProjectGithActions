@@ -1,7 +1,7 @@
 name: Maven Package
 
 on:
-  pull_request:
+  push_request:
     branches:
       - master
 
